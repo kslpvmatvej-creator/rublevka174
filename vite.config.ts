@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import config from './src/business.json'
 
 export default defineConfig({
+  base: process.env.VITE_BASE || '/rublevka174/',
   plugins: [
     react(),
     tailwindcss(),
@@ -36,8 +37,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
-        navigateFallback: '/index.html',
-        // Картинки (в т.ч. ссылки из админки) кэшируются: при обновлении страницы показываются мгновенно
+        navigateFallback: '/rublevka174/index.html',
         runtimeCaching: [
           {
             urlPattern: ({ request }: { request: Request }) => request.destination === 'image',
