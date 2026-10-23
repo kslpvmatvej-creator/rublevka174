@@ -1,0 +1,71 @@
+{
+  "name": "Rublevka174",
+  "shortName": "Rublevka174",
+  "tagline": "Премиальный детейлинг, защитные плёнки и оклейка кузова",
+  "description": "Детейлинг-студия Rublevka174, Челябинск: мойка, химчистка, полировка, бронирование кузова, оклейка плёнкой",
+  "phone": "+7 (951) 770-88-80",
+  "address": "г. Челябинск, Советский район, ул. Кирова, 130ж/1",
+  "addressUrl": "https://2gis.ru/chelyabinsk/geo/2111697980524338",
+  "contacts": {
+    "telegram": "rublevka174",
+    "whatsapp": "79517708880",
+    "instagram": "rublevka174",
+    "twoGis": "https://2gis.ru/chelyabinsk/firm/70000001054779250"
+  },
+  "themeColor": "#3b82f6",
+  "backgroundColor": "#000000",
+  "hero": {
+    "eyebrow": "Premium Detailing & Wrapping",
+    "photo": "/hero/fon-1200.webp",
+    "photoSrcSet": "/hero/fon-800.webp 800w, /hero/fon-1200.webp 1200w, /hero/fon-1600.webp 1600w",
+    "photoAlt": "Белый Porsche на вечерней улице"
+  },
+  "gallery": [
+    {
+      "photo": "https://i2.photo.2gis.com/photo-gallery/00e2f58f-5944-43fa-93c1-b4aca817b62b_656x340.jpg",
+      "caption": "Общий вид"
+    },
+    {
+      "photo": "https://i4.photo.2gis.com/images/branch/0/30258560165649292_d45f_656x340.jpg",
+      "caption": "Детали кузова"
+    },
+    {
+      "photo": "https://i0.photo.2gis.com/images/branch/0/30258560087579469_278e.jpg",
+      "caption": "Салон и руль"
+    }
+  ],
+  "awards": {
+    "photo": "/awards.jpg",
+    "eyebrow": "Нам доверяют",
+    "title": "Премия 2ГИС",
+    "caption": "Лучший детейлинг 2023–2026"
+  },
+  "reviews": {
+    "rating": 5.0,
+    "count": 148,
+    "url": "https://2gis.ru/chelyabinsk/firm/70000001054779250/tab/reviews",
+    "items": []
+  },
+  "leadSources": [
+    "2ГИС",
+    "Instagram",
+    "По рекомендации",
+    "Проезжал мимо",
+    "Другое"
+  ],
+  "workingHours": {
+    "open": "11:00",
+    "close": "20:00"
+  },
+  "services": [
+    {"id": "wash", "name": "Детейлинг-мойка", "category": "Мойка и химчистка", "price": 3000, "icon": "Droplets"},
+    {"id": "body-clean", "name": "Химчистка кузова", "category": "Мойка и химчистка", "price": 5000, "icon": "SprayCan"},
+    {"id": "interior-clean", "name": "Химчистка салона", "category": "Салон", "price": 10000, "icon": "Wind"},
+    {"id": "polish", "name": "Полировка", "category": "Кузов", "price": 12000, "icon": "Sparkles"},
+    {"id": "body-armor", "name": "Бронирование кузова", "category": "Кузов", "price": 60000, "icon": "ShieldCheck"},
+    {"id": "tint", "name": "Тонирование", "category": "Тонировка и звук", "price": 1500, "icon": "Sun"},
+    {"id": "audio", "name": "Автозвук", "category": "Тонировка и звук", "price": 3000, "icon": "Disc3"},
+    {"id": "wrap", "name": "Оклейка цветной плёнкой", "category": "Кузов", "price": 0, "priceLabel": "Индивидуальный расчёт", "icon": "Layers"},
+    {"id": "leather", "name": "Реставрация кожи", "category": "Салон", "price": 0, "priceLabel": "После осмотра", "icon": "Armchair"}
+  ]
+}
