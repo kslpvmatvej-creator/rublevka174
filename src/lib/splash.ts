@@ -1,4 +1,5 @@
 import business from '../business.json'
+import { withBase } from './asset'
 
 /**
  * Заставка загрузки (разметка и анимация — в index.html, чтобы появиться мгновенно, ещё до загрузки скриптов).
@@ -31,7 +32,7 @@ export function runSplash() {
     img.referrerPolicy = 'no-referrer'
     img.addEventListener('load', () => resolve())
     img.addEventListener('error', () => resolve())
-    img.src = business.hero.photo
+    img.src = withBase(business.hero.photo)
     if (img.complete) resolve()
   })
   const fonts = document.fonts?.ready ?? Promise.resolve()

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Car } from 'lucide-react'
 
+import { withBase, withBaseSrcSet } from '../lib/asset'
 import { cn } from '../lib/cn'
 
 type Props = {
@@ -48,8 +49,8 @@ export default function CarPhoto({ src, srcSet, sizes, alt, className, imgClassN
             // Картинка уже в кэше браузера — показываем без анимации
             if (el && el.complete && el.naturalWidth > 0) setLoaded(true)
           }}
-          src={src && !src.startsWith('http') ? `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}` : src}
-          srcSet={srcSet}
+          src={withBase(src)}
+          srcSet={withBaseSrcSet(srcSet)}
           sizes={sizes}
           alt={alt}
           decoding="async"

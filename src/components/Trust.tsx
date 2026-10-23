@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { ArrowUpRight, Award, Star, X } from 'lucide-react'
 
 import business from '../business.json'
+import { withBase } from '../lib/asset'
 import { cn } from '../lib/cn'
 import { plural } from '../lib/plural'
 
@@ -61,7 +62,7 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
         <X className="h-5 w-5" />
       </button>
       <img
-        src={src}
+        src={withBase(src)}
         alt={alt}
         onClick={(e) => e.stopPropagation()}
         className="max-h-[calc(100dvh-2rem)] max-w-full rounded-3xl border border-white/10 object-contain shadow-[0_30px_100px_-20px_rgba(0,0,0,0.9)]"
@@ -117,7 +118,7 @@ export default function Trust() {
         >
           <span className="relative h-24 w-[4.5rem] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 ring-1 ring-brand/30 md:h-28 md:w-[5.25rem]">
             <img
-              src={awards.photo}
+              src={withBase(awards.photo)}
               alt=""
               loading="lazy"
               decoding="async"

@@ -5,8 +5,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 import config from './src/business.json'
 
+// Подпапка GitHub Pages. Для корня домена: VITE_BASE=/ npm run build
+const rawBase = process.env.VITE_BASE || '/rublevka174/'
+const base = `/${rawBase.replace(/^\/+|\/+$/g, '')}/`.replace(/^\/\/$/, '/')
+
 export default defineConfig({
-  base: process.env.VITE_BASE || '/rublevka174/',
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -18,8 +22,9 @@ export default defineConfig({
         short_name: config.shortName,
         description: config.description,
         lang: 'ru',
-        start_url: '/',
-        scope: '/',
+        id: base,
+        start_url: base,
+        scope: base,
         display: 'standalone',
         orientation: 'portrait',
         theme_color: config.themeColor,
@@ -37,7 +42,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
-        navigateFallback: '/rublevka174/index.html',
+        navigateFallback: `${base}index.html`,
         runtimeCaching: [
           {
             urlPattern: ({ request }: { request: Request }) => request.destination === 'image',
