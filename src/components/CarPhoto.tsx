@@ -48,7 +48,7 @@ export default function CarPhoto({ src, srcSet, sizes, alt, className, imgClassN
             // Картинка уже в кэше браузера — показываем без анимации
             if (el && el.complete && el.naturalWidth > 0) setLoaded(true)
           }}
-          src={src}
+          src={src && !src.startsWith('http') ? `${import.meta.env.BASE_URL}${src.replace(/^\//, '')}` : src}
           srcSet={srcSet}
           sizes={sizes}
           alt={alt}
