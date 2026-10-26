@@ -7,7 +7,7 @@ import config from './src/business.json'
 
 // Подпапка GitHub Pages. Для корня домена: VITE_BASE=/ npm run build
 const rawBase = process.env.VITE_BASE || '/rublevka174/'
-const base = /
+const base = '/'
 
 export default defineConfig({
   base,
