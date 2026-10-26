@@ -10,6 +10,11 @@ const base = '/'
 
 export default defineConfig({
   base,
+  // ДОБАВЬТЕ ЭТОТ БЛОК ДЛЯ ИСПРАВЛЕНИЯ ОШИБКИ ХОСТА:
+  server: {
+    allowedHosts: true, // разрешает любые хосты, включая ваш новый домен
+    host: true
+  },
   plugins: [
     react(),
     tailwindcss(),
